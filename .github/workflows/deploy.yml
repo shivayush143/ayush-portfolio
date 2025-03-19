@@ -6,6 +6,9 @@ on:
 jobs:
     build-test-deploy:
         runs-on: ubuntu-latest
+        env:
+            DOCKER_HOST: ssh://${{ secrets.USER }}@${{ secrets.HOST }}
+            DOCKER_CLI: docker
         steps:
             - name: Checkout
               uses: actions/checkout@v1
@@ -24,6 +27,7 @@ jobs:
               uses: appleboy/ssh-action@v1.0.3
               with:
                     host: ${{ secrets.HOST }}
+                    username: ${{ secrets.USER }}
                     key: ${{ secrets.SSH_KEY }}
                     script: |
                         docker stop website || true
