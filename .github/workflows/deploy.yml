@@ -21,7 +21,7 @@ jobs:
                 push: true
                 tags: darshana806/portfolio:latest-${{ github.sha }}
             - name: Deploy to ec2
-              uses: appleboy/ssh-action@master
+              uses: appleboy/ssh-action@v1.0.3
               with:
                     host: ${{ secrets.HOST }}
                     key: ${{ secrets.SSH_KEY }}
