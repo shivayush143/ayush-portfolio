@@ -3,7 +3,7 @@ name: Portfolio Deployment
 on:
   push:
     branches:
-    - main
+    - feature/practice
 
 jobs:
   build-and-deploy:
