@@ -3,7 +3,7 @@ on:
     workflow_dispatch:
     push:
             branches:
-                - feature/practice
+                - main
 jobs:
      build-and-deploy:
             runs-on: ubuntu-latest

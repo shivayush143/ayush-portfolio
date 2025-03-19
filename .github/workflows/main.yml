@@ -3,7 +3,7 @@ name: Portfolio Deployment
 on:
   push:
     branches:
-    - feature/practice
+    - main
 
 jobs:
   build-and-deploy:
@@ -23,4 +23,3 @@ jobs:
       run: aws s3 sync . s3://tws-junoon --delete
       
 
-      
