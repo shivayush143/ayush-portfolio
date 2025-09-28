@@ -1,3 +1,4 @@
+#S3 bucket policy for public access
 {
   "Version": "2012-10-17",
   "Statement": [{
